@@ -1,16 +1,14 @@
-import Footer from "@/app/components/Footer";
-import Headline from "@/app/components/Headline";
-import Links from "@/app/components/Links";
+"use client";
+
 import Image from "next/image";
+import { Main } from "@/app/components/Main";
+import Footer from "@/app/components/Footer";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>about.js</div>
-      <Headline page="about"/>
-      <Links/>
-      <Footer/>
+      <Main page="about"/>
+      <Footer />
     </main>
-
   );
 }
