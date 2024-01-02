@@ -19,13 +19,6 @@ export default function Home() {
     }
   }, [count]);
 
-  useEffect(() => {
-    document.body.style.backgroundColor = "lightBlue";
-    return () => {
-      document.body.style.backgroundColor = "";
-    };
-  }, [count]);
-
   const handleCange = useCallback((e) => {
     if (e.target.value.length > 5) {
       return;
@@ -36,7 +29,14 @@ export default function Home() {
   const handleDisplay = useCallback(() => {
     setIsShow(!isShow);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isShow]);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "lightBlue";
+    return () => {
+      document.body.style.backgroundColor = "";
+    };
+  }, [count]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
