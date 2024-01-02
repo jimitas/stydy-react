@@ -3,12 +3,12 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header>
+    <header className="flex justify-center">
       <Link href="/">
-        <div>Index</div>
+        <div>Index　</div>
       </Link>
       <Link href="/about">
-        <div>About</div>
+        <div>　About</div>
       </Link>
     </header>
   );

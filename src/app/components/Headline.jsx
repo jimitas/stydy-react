@@ -3,7 +3,7 @@ import React from "react";
 const Headline = (props) => {
   return (
     <div>
-      <h1 style={{ textTransform: "capitalize" }}>{props.page} page</h1>
+      <h1 className="text-8xl" style={{ textTransform: "capitalize" }}>{props.page} page</h1>
       <h2>
         Get started by editing{"　"}
         {props.code}
