@@ -8,11 +8,21 @@ import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 
 export default function Home() {
-  const [cout, setCount] = useState(1);
+  const [count, setCount] = useState(1);
 
-  const handleClick = (e) => {
-    setCount((count) => count + 1);
-  };
+  const handleClick = useCallback((e) => {
+    console.log(count)
+    if (count < 10) {
+      setCount((count) => count + 1);
+    }
+  }, [count]);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "lightBlue";
+    return () => {
+      document.body.style.backgroundColor = "";
+    };
+  }, [count]);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
