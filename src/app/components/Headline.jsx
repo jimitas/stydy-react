@@ -1,7 +1,6 @@
 import React from "react";
 
 const Headline = (props) => {
-  console.log("headline", props);
   return (
     <div>
       <h1 style={{ textTransform: "capitalize" }}>{props.page} page</h1>
