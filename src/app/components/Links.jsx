@@ -1,32 +1,9 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 
-const ITEMS = [
-  {
-    href: "https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app",
-    title: "Docs →",
-    description: "Find in-depth information about Next.js features and API.",
-  },
-  {
-    href: "https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app1",
-    title: "Learn →",
-    description: "Find in-depth information about Next.js features and API.",
-  },
-  {
-    href: "https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app2",
-    title: "Docs →",
-    description: "Find in-depth information about Next.js features and API.",
-  },
-  {
-    href: "https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app3",
-    title: "Docs →",
-    description: "Learn about Next.js in an interactive course with&nbsp;quizzes!",
-  },
-];
-
-const Links = () => {
+const Links = ({items,handleReduce}) => {
   return (
     <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-      {ITEMS.map((item) => {
+      {items.map((item) => {
         return (
           <div
             key={item.href}
